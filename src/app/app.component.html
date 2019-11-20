@@ -1,4 +1,13 @@
-<!-- <app-home></app-home> -->
-<!-- <button mat-mini-fab>Basic</button>
+<!-- <app-home></app-home>
+<button mat-mini-fab>Basic</button>
 <button mat-raised-button color="warn">Warn</button> -->
+<header>
+    <mat-toolbar color="primary">
+        <mat-toolbar-row>
+            <span>Product Bazar</span>
+            <a mat-stroked-button [routerLink]="['/home']" routerLinkActive="active-link" >Home</a>
+            <a mat-stroked-button [routerLink]="['/products']" routerLinkActive="active-link" >Products</a>
+        </mat-toolbar-row>
+    </mat-toolbar>
+</header>
 <router-outlet></router-outlet>
