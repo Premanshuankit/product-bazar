@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
+import { LoginComponent } from './components/login/login.component';
 
 
 const routes: Routes = [
@@ -18,6 +19,10 @@ const routes: Routes = [
   path: 'products',
   pathMatch: 'full',
   loadChildren: './modules/products/products.module#ProductsModule'
+  },
+  {
+    path: 'login',
+    component: LoginComponent
   }
 ];
 
