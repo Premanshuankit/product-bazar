@@ -1,0 +1,41 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>Register</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <form [formGroup]="userForm">
+            <table cellspacing="0">
+                <tr>
+                    <td>
+                        <mat-form-field>
+                            <input matInput name="fullname" formControlName="fullname" 
+                            placeholder="Fullname" required>
+                        </mat-form-field>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <mat-form-field>
+                                <input matInput type="email" name="email" formControlName="email" 
+                                placeholder="Email" required>
+                        </mat-form-field>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <mat-form-field>
+                                <input matInput type="password" name="password" formControlName="password" 
+                                placeholder="Password" required>
+                        </mat-form-field>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-raised-button color='warn' (click)="register()">Register</button>
+        <span class="ml-3">
+            Already have an account? <a [routerLink]="['/login']">Login</a> here.
+        </span>
+    </mat-card-actions>
+</mat-card>

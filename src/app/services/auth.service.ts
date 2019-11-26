@@ -1,11 +1,17 @@
 import { Injectable } from '@angular/core';
 import { of } from 'rxjs';
 
+export interface User {
+  email: string;
+  fullname: string;
+  password: string;
+}
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
+  private user$ = Subject<User>();
   constructor() { }
 
   // user authentication -- either user is old or not
@@ -14,5 +20,14 @@ export class AuthService {
     console.log('login credentials', loginCredentials);
     // return of( { email, password });
     return of( loginCredentials);
+  }
+
+  get user() {
+    this.user$.asObservable();
+  }
+
+  register(user: any) {
+    this.user$.next(user);
+    return of(user);
   }
 }

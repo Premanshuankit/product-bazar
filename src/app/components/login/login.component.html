@@ -26,5 +26,8 @@
 
     <mat-card-actions>
         <button mat-raised-button color='warn' (click)="login()">Login</button>
+        <span>
+            Don't have an account? <a [routerLink]="['/register']">Register</a> here.
+        </span>
     </mat-card-actions>
 </mat-card>
